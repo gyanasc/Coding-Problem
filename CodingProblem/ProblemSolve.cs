@@ -11,18 +11,6 @@ namespace CodingProblem
         public static IList<string> GetKeyFromJsonString(string jsonStr)
         {
             JObject jsonObj = JObject.Parse(jsonStr);
-            //List<string> keys1 = new List<string>();
-            //foreach (var child in jsonObj.Children())
-            //{
-            //    if (child.HasValues)
-            //    {
-            //        var str = child.;
-            //        keys1.Add(str);
-            //        //var ChildKeys1 = GetKeys(child);
-            //        //var ChildKeys = jsonObj.Properties().Select(p => p.Name).ToList();
-            //    }
-            //}
-
             var keys = jsonObj.Properties().Select(p => p.Name).ToList();
             keys1.AddRange(keys);
             foreach (var key in keys)
